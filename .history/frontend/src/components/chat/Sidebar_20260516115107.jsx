@@ -30,7 +30,7 @@ export default function Sidebar({ activeUsers, currentRoom, username, connected,
             </svg>
           </div>
           <div className="min-w-0">
-            <p className="font-display font-bold text-white text-sm truncate">Saral_Chat</p>
+            <p className="font-display font-bold text-white text-sm truncate">NexusChat</p>
             <div className="flex items-center gap-1.5 mt-0.5">
               <div className={`w-1.5 h-1.5 rounded-full ${connected ? 'bg-emerald-400' : 'bg-red-400'}`} />
               <span className="text-xs text-slate-500">{connected ? 'Connected' : 'Offline'}</span>
