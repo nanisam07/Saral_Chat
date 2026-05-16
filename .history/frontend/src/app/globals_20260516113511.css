@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* MODERN LAYOUT RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #040816;
+  color: white;
+  /* Protects text line heights from collapsing */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left,
+      rgba(99, 102, 241, 0.22),
+      transparent 30%),
+    radial-gradient(circle at bottom right,
+      rgba(168, 85, 247, 0.18),
+      transparent 30%),
+    #040816;
+}
+
+/* DEFAULTS TO PREVENT COLLAPSING */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* GRID BACKGROUND */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px
+    );
+
+  background-size: 42px 42px;
+  pointer-events: none;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+}
+
+/* INPUT FIXES */
+input {
+  outline: none;
+  color: white;
+  background: transparent;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
